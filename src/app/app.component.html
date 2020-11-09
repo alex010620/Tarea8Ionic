@@ -1,3 +1,37 @@
+
+
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <ion-menu id="man" side="start" menuId="PrmerMenu" contentId="main">
+    <ion-header [translucent]="true">
+      <ion-toolbar color="primary">
+        <ion-title>Secrets</ion-title>
+        </ion-toolbar>
+        </ion-header>
+        <ion-content>
+        <ion-list>
+        <ion-menu-toggle>
+          <ion-item (click)="irInicio()">Inicio</ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle>
+          <ion-item (click)="irRegistro()" >Registrar secreto</ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle>
+          <ion-item (click)="CambiarPassword()" >Cambiar clave</ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle>
+          <ion-item (click)="presentAlertPrompt()" >Cambiar nombre y correo</ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle>
+          <ion-item>Nosotros</ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle>
+          <ion-item>Ayuda</ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle>
+          <ion-item (click)="presentAlertConfirm()">Salir</ion-item>
+        </ion-menu-toggle>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+  <ion-router-outlet id="main"></ion-router-outlet>
 </ion-app>

@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title style="margin-left: 34%;" >Secrets</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content  >
+  <img class="icon" src="../../assets/empathy (1).png" width="180" height="180" alt="" style="margin-top: 50px; margin-bottom: 20px;">
+  <div style="width: 85%; margin: 0 auto;">
+    <ion-item>
+      <ion-label position="floating" >Correo</ion-label>
+      <ion-input type="text" [(ngModel)]="correo" name="correo" ></ion-input>
+    </ion-item> 
+    <br>
+    <ion-item>
+      <ion-label position="floating" >Contraseña</ion-label>
+      <ion-input type="password"  [(ngModel)]="clave" name="clave" ></ion-input>
+    </ion-item> 
+    <br>
+    <ion-button (click)="login()" expand="block">Iniciar Sesion</ion-button>
+    <br>
+    <ion-label (click)="irRegistro()" style="margin-left: 6px;">No tengo una cuenta <label style="color: #009cda;" for="">Crear una!</label></ion-label>
+  </div>
+
+</ion-content>

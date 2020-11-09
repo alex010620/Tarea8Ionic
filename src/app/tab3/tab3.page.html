@@ -1,17 +1,52 @@
+<style>
+  .int{
+    border: 1px solid gray;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+  }
+  .int:hover{
+    border: solid #009cda;
+    border-radius: 6px;
+  }
+  .Content{
+    margin-top: 10%;
+  }
+  .lbl{
+    margin-bottom: 15px;
+  }
+</style>
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button slot="icon-only" name="menu-outline" menu="PrmerMenu"></ion-menu-button>
+    </ion-buttons>
     <ion-title>
-      Tab 3
+      Registro de Secretos
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+  <br><br>
+  <div class="Content"  style="width: 85%; margin: 0 auto;">
+    <ion-label class="lbl" >Titulo</ion-label>
+  <ion-input [(ngModel)]="titulo"  class="int" type="text"></ion-input>
+  <ion-label class="lbl" >Descripcion</ion-label>
+  <ion-textarea [(ngModel)]="descripcion" class="int" type="email"></ion-textarea>
+  <ion-label class="lbl" >Valor Monetario</ion-label>
+  <ion-input [(ngModel)]="valor" class="int" type="text"></ion-input>
+  <ion-label class="lbl" >Fecha</ion-label>
+  <ion-input [(ngModel)]="fecha" class="int" type="text"></ion-input>
+  <ion-label class="lbl" >Lugar</ion-label>
+  <ion-input [(ngModel)]="lugar" class="int" type="email"></ion-input>
+  <ion-label class="lbl" >Logitud y Longitud</ion-label>
+  <ion-input [(ngModel)]="long" class="int" type="text"></ion-input>
+  <br>
+  <ion-button (click)="guardar()" expand="block">Guardar</ion-button>
+  </div>
+  <br>
+  <br>
+  <br>
 </ion-content>
+

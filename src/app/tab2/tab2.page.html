@@ -1,17 +1,43 @@
+<style>
+  .int{
+    border: 1px solid gray;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+  }
+  .int:hover{
+    border: solid #009cda;
+    border-radius: 6px;
+  }
+  .Content{
+    margin-top: 10%;
+  }
+  .lbl{
+    margin-bottom: 15px;
+  }
+</style>
+
+
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar color="primary">
     <ion-title>
-      Tab 2
+      Registro
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+  <br><br>
+  <div class="Content"  style="width: 85%; margin: 0 auto;">
+    <ion-label class="lbl" >Nombre</ion-label>
+  <ion-input [(ngModel)]="nombre" class="int" type="text"></ion-input>
+  <ion-label class="lbl" >Correo Electronico</ion-label>
+  <ion-input [(ngModel)]="correo" class="int" type="email"></ion-input>
+  <ion-label class="lbl" >Clave</ion-label>
+  <ion-input [(ngModel)]="clave" class="int" type="password"></ion-input>
+  <br>
+  <ion-button (click)="datos()" expand="block">Registrarme</ion-button>
+  <br>
+  <ion-label (click)="irLogin()" style="margin-left: 6px;">Ya tengo una cuenta <label style="color: #009cda;" for="">Iniciar Sesion!</label></ion-label>
+  </div>
 </ion-content>

@@ -1,0 +1,8 @@
+{
+    "/api/*":{
+      "target":"https://yanm.herokuapp.com",
+       "secure":false,
+       "changeOrigin":true
+    }
+  }
+  

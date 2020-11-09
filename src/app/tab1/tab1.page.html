@@ -1,17 +1,59 @@
+<style>
+  h4{
+    display: block;
+    margin: auto;
+    color: #3880ff;
+  }
+</style>
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="primary">
+      <ion-button>
+        <ion-icon float="left" name="person-circle"></ion-icon>
+        {{conver.iniciadoSesion}}
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="start">
+      <ion-menu-button slot="icon-only" name="menu-outline" menu="PrmerMenu"></ion-menu-button>
+    </ion-buttons>
+    <ion-title style="padding-left: 0;">Secrets</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+<ion-content [fullscreen]="true">
+  <br>
+  <br>
+  <div id="div1"  style="width: 85%; margin: 0 auto; height: 50px;">
+    <label for="">
+      Bienvenido a Secrets, No tienes secretos registra uno...
+    </label>
+  </div>
+  <div id="div3" style="width: 85%; margin: 0 auto;">
+    <img class="icon" src="../../assets/empathy (1).png" width="100" height="100" alt="" style="margin: 0 auto; display:block;">
+  </div>
+  <br>
+  <br>
+  <div id="div4" style="width: 85%; margin: 0 auto;">
+    <ion-button style="float: right;" (click)="presentAlertConfirm()" color="danger">Borrar secreto</ion-button>
+    <h2>Tu secreto</h2>
+    <br>
+   <h4>Titulo</h4>
+   <p>{{conver.Titulo}}</p>
+   <h4>Descripcion</h4>
+   <p>{{conver.Descripcion}}</p>
+   <h4>Valor Monetario</h4>
+   <p>{{conver.ValorMonetario}}</p>
+   <h4>Fecha</h4>
+   <p>{{conver.Fecha}}</p>
+   <h4>Lugar de suceso</h4>
+   <p>{{conver.Lugar}}</p>
+   <h4>Latitud y Longitud</h4>
+   <p>{{conver.LongitudYLatitud}}</p>
+  </div>
+  <div id="div2" style="width: 85%; margin: 0 auto;">
+    <img class="icon" src="../../assets/empathy (1).png" width="250" height="250" alt="" style="margin: 0 auto; display:block;">
+  </div>
+  <br>
+  <br>
 </ion-content>
